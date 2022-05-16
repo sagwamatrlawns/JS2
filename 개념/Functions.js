@@ -8,6 +8,7 @@ sayHello("KJ", 10);
 sayHello("dal", 213);
 sayHello("lynn", 21);
 
+// function에 정보를 보내서 수식 적용해 보기
 function plus(firstNumber, secondNumber) {
   console.log(firstNumber + secondNumber);
 }
