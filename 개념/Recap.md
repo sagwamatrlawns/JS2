@@ -46,3 +46,4 @@ const player = {<br>
 };
 
 **🍉function** <br>
+function이란 코드를 캡슐화 해서 계속 반복해서 사용할 수 있도록 만들어 주는 것이다.
