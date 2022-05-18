@@ -36,3 +36,13 @@ pizza.push("이야!"); : "pizza" array에 "이야!" 라는 것을 추가한다�
 
 **const로 만들어진 array가 업데이트가 가능한이유**<br>
 const자체를 변경하는 것이 아닌 objects의 값을 변경하는 것이기 떄문에 없데이트에 오류가 없는 것이다.
+
+**🍌object(객체)**<br>
+객체란 여러 속성을 하나의 변수에 자장할 수 있도록 해주는 데이터 타입이다.<br>
+선언예시)
+const player = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "KJ",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 98,<br>
+};
+
+**🍉function** <br>
