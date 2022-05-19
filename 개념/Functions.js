@@ -1,5 +1,5 @@
 // Function은 내가 계속 반복해서 사용할 수 있는 코드 조각이다.
-// 어떤 코드를 캡슐화 해서 실행ㅇ을 여러번 할 수 있게 해준다.
+// 어떤 코드를 캡슐화 해서 실행을 여러번 할 수 있게 해준다.
 function sayHello(nameOfPerson, age) {
   console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
 }
