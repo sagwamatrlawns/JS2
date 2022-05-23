@@ -1,8 +1,3 @@
-const title = document.getElementById("title");
+const hellos = document.getElementsByClassName("hello");
 
-console.dir(title);
-
-title.innerText = "Got you!";
-
-console.log(title.id);
-console.log(title.className);
+console.log(hellos);
