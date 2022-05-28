@@ -1,3 +1,3 @@
-const hellos = document.getElementsByClassName("hello");
+const title = document.querySelectorAll(".hello h1");
 
-console.log(hellos);
+console.log(title);
