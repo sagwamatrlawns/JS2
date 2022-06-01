@@ -1,23 +1,9 @@
 const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-  //   const currentColor = h1.style.color;
-  //   let newColor;
-  //   if (h1.style.color === "blue") {
-  //     newColor = "tomato";
-  //   } else {
-  //     newColor = "blue";
-  //   }
-  //   h1.style.color = newColor;
-  const clickedClass = "clicked sexy-font";
-  if (h1.className === clickedClass) {
-    console.log(1);
-    h1.className = "";
-  } else {
-    console.log(2);
-    h1.className = clickedClass;
-  }
-  //h1.className = "active";
+  h1.classList.toggle("clicked");
+  // toggle 은 h1의 classList에 clicked class가 이미 있는지 확인해서
+  // 있다면 clicked를 제거 해주고 없다면 clicked를 추가해 준다.
 }
 
 h1.addEventListener("click", handleTitleClick);
