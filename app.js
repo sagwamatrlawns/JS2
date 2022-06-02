@@ -1,5 +1,11 @@
-const title = document.querySelector("div.hello:first-child h1");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-console.dir(title);
+function onLoginBtnClick() {
+  //console.log(loginInput.value);
+  //console.log("dial");
+  const username = loginInput.value;
+  console.log(username);
+}
 
-title.style.color = "blue";
+loginButton.addEventListener("click", onLoginBtnClick);

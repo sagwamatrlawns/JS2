@@ -8,9 +8,17 @@
     <title>MSG App</title>
   </head>
   <body>
-    <div class="hello">
-      <h1>Grab me 1!</h1>
-    </div>
+    // html의 input 유효성 검사를 위해서는 input이 form안에 있어야 한다.
+    <form id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      // input 안에 있는 button을 누르거나 type이 submit인 input을 클릭하면
+      <button>Log In</button>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>
