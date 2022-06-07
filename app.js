@@ -12,9 +12,10 @@ function onLoginSubmit(event) {
   //console.log("dial");
   //const username = loginInput.value;
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   console.log(username);
-  greeting.innerText = "Hello " + username;
+
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
