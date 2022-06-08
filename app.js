@@ -13,10 +13,13 @@ function onLoginSubmit(event) {
   //console.log(loginInput.value);
   //console.log("dial");
   //const username = loginInput.value;
+  //const username = loginInput.value;
+  //localStorage.setItem(USERNAME_KEY, username);
+
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  loginForm.classList.add(HIDDEN_CLASSNAME);
-  console.log(username);
+  //console.log(username);
   paintGreetings(username);
 }
 
