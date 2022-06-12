@@ -15,6 +15,7 @@ function paintToDo(newTodo) {
   // newTodo에 저장된 input값을 span에 넣음
   span.innerText = newTodo;
 
+  // list에 li를 넣음
   toDoList.appendChild(li);
 }
 
