@@ -2,6 +2,16 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
+// todos를 변수로 지정
+const TODOS_KEY = "todos";
+
+let toDos = [];
+
+function saveToDos() {
+  // JSON.stringify(toDos)을 이용해서 toDos의 값을 string값음로 변환
+  localStorage.setItem("todos", JSON.stringify(toDos));
+}
+
 // 버튼을 클릭하면 이 함수가 실행되고 event의 값을 가져온다.
 function deletToDo(event) {
   // target은 클릭된 HTML element이다
@@ -10,7 +20,7 @@ function deletToDo(event) {
   li.remove();
 }
 
-function paintToDo(newTodo) {
+function parintToDo(newTodo) {
   // hmlt에 li를 생성함
   const li = document.createElement("li");
 
@@ -46,7 +56,24 @@ function handleToDoSubmit(event) {
   // input 의 현재 value를 새로운 변수에 복사하는 것
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  paintToDo(newTodo);
+  toDos.push(newTodo);
+  parintToDo(newTodo);
+
+  // 7번쨰 줄의 함수 호출
+  saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+function sayHello(item) {
+  console.log("this is the turn of", item);
+}
+
+// todos에 있는 string형식을 todolist를 savedToDos를 저장한다.
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
+  parsedToDos.forEach(parintToDo);
+}
