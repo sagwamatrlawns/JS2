@@ -17,6 +17,7 @@ function deletToDo(event) {
   // target은 클릭된 HTML element이다
   // parentElement는 클릭된 element의 부모이다
   const li = event.target.parentElement;
+  console.log(li.id);
   li.remove();
 }
 
@@ -24,11 +25,13 @@ function parintToDo(newTodo) {
   // hmlt에 li를 생성함
   const li = document.createElement("li");
 
+  li.id = newTodo.id;
+
   // li안에 span을 생성함
   const span = document.createElement("span");
 
   // newTodo에 저장된 input값을 span에 넣음
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
 
   // html에 button을 생성해 준다.
   const button = document.createElement("button");
@@ -56,8 +59,18 @@ function handleToDoSubmit(event) {
   // input 의 현재 value를 새로운 변수에 복사하는 것
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo);
-  parintToDo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+
+    // 각각에게 아이디를 부여하기 위한 함수
+    id: Date.now(),
+  };
+
+  // 오브텍트롤 변환된어서 호출
+  toDos.push(newTodoObj);
+
+  // text 형식으로 넘김
+  parintToDo(newTodoObj);
 
   // 7번쨰 줄의 함수 호출
   saveToDos();
@@ -75,5 +88,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
+
+  // localStorage에서 받으면 forEach가 실행되고 paintToDo를 호출한다.
   parsedToDos.forEach(parintToDo);
 }
