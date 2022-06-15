@@ -17,8 +17,16 @@ function deletToDo(event) {
   // target은 클릭된 HTML element이다
   // parentElement는 클릭된 element의 부모이다
   const li = event.target.parentElement;
-  console.log(li.id);
+
   li.remove();
+
+  // filter TIL보기
+  // toDo.id와 li.id의 타입이 달라서 parseInt로 감싸서 문자열을 숫자로 바꿔줌
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+
+  // toDos DB에서 todo를 지운 뒤에
+  // saveToDos를 다시 호출한다.
+  saveToDos();
 }
 
 function parintToDo(newTodo) {
