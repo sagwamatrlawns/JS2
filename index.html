@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<lang lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>MSG App</title>
   </head>
-  <>
+  </lang>
     <!-- html의 input 유효성 검사를 위해서는 input이 form안에 있어야 한다. -->
+    <h2 id="clock">00:00</h2>
     <form class="hidden" id="login-form">
       <input
+        id="sagwa" 
         required
         maxlength="15"
         type="text"
         placeholder="What is your name?"
       />
       <!-- input 안에 있는 button을 누르거나 type이 submit인 input을 클릭하면 -->
-      <button>Log In</button>
+      <!-- <button>Log In</button> -->
     </form>
-    <h2 id="clock">00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
+      <input id="pizza" type="text" placeholder="Write a To Do and Press Enter" required />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">
@@ -33,6 +34,8 @@
       <span></span>
       <span></span>
     </div>
+
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
