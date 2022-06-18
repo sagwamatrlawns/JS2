@@ -16,14 +16,14 @@
 }
 
 #clock {
-  margin-top: 200px;
+  margin-top: 100px;
   text-align: center;
-  font-size: 128px;
+  font-size: 10rem;
   color: white;
 }
 
 #pizza {
-  margin-top: 60px;
+  margin-top: 30px;
   outline: none;
   background: none;
   border: none;
@@ -55,4 +55,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#quote {
+  background: none;
+  outline: none;
 }
