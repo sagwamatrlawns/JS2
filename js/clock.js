@@ -9,7 +9,7 @@ function getClock() {
   const date = new Date();
   // 이 코드를 실행하면 밀리초, 초, 분, 시간등을 전부 가져올 수 있다.
 
-  const hours = String(date.getHours()).padStart(2, "0");
+  let hours = String(date.getHours()).padStart(2, "0");
   // 시간을 변수 hours에 저장
   // 변수를 저장하기 전에 String로 감싸서 number형식을  String으로 바꿔서 저장
 
@@ -21,7 +21,13 @@ function getClock() {
   // 초를 변수 seconds에 저장
   // 변수를 저장하기 전에 String로 감싸서 number형식을  String으로 바꿔서 저장// 변수를 저장하기 전에 String로 감싸서 number형식을  String으로 바꿔서 저장
 
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  //clock.innerText = `${hours / 12}:${minutes}:${seconds}`;
+  if (hours > 12) {
+    hours = hours - 12;
+    clock.innerText = `${hours}:${minutes} AM`;
+    return;
+  }
+  clock.innerText = `${hours}:${minutes} PM`;
   // 위에서 불러온 clock에 innerText를 사용해서 넣음
 }
 
