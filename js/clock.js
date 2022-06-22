@@ -24,10 +24,14 @@ function getClock() {
   //clock.innerText = `${hours / 12}:${minutes}:${seconds}`;
   if (hours > 12) {
     hours = hours - 12;
+    clock.innerText = `${hours}:${minutes} PM`;
+    return;
+  } else if ((hours === 0, "0")) {
+    hours = 12;
     clock.innerText = `${hours}:${minutes} AM`;
     return;
   }
-  clock.innerText = `${hours}:${minutes} PM`;
+  clock.innerText = `${hours}:${minutes} AM`;
   // 위에서 불러온 clock에 innerText를 사용해서 넣음
 }
 
