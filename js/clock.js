@@ -28,11 +28,9 @@ function getClock() {
     hours = String(hours - "12");
     clock.innerText = `${hours}:${minutes} PM`;
   } else if (hours == "0") {
-    console.log("dial");
     hours = 12;
     clock.innerText = `${hours}:${minutes} AM`;
   } else {
-    console.log("dial1");
     clock.innerText = `${hours}:${minutes} AM`;
   }
 
